@@ -1,5 +1,3 @@
-<img width="564" height="573" alt="as is flow fraud engine" src="https://github.com/user-attachments/assets/c80ba6f3-97b1-4978-b078-a259e39cd868" />
-<img width="564" height="573" alt="as is flow fraud engine" src="https://github.com/user-attachments/assets/fa283e7c-73f3-453f-b6c2-b5bbc2a8a9f5" />
 # real-time-fraud-engine-mockup
 A mock real-time event-driven fraud detection rules engine.
 # 🏦 Global Standard Bank: Real-Time Fraud Engine (`RAM`)
@@ -15,7 +13,9 @@ A mock real-time event-driven fraud detection rules engine.
 * [cite_start]**Business Impact:** During FY 26-27, GSB suffered financial losses exceeding $42 million due to these fraudulent transactions[cite: 10].
 
 ## 3. As-Is Process Flow
+<img width="564" height="573" alt="as is flow fraud engine" src="https://github.com/user-attachments/assets/c80ba6f3-97b1-4978-b078-a259e39cd868" />
 
+*(See `/docs/as_is_process.png` for the detailed BPMN model)*
 Currently, authorization requests are processed by the Customer's Bank and sent to local storage. [cite_start]They sit in a queue until 5:00 PM everyday, at which point 'RAVAN' evaluates the transaction risk and flags items for human review. By this time, funds have often already settled.
 
 ## 4. Proposed Solution (To-Be State)
