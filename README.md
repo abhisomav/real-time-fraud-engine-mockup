@@ -15,7 +15,7 @@ A mock real-time event-driven fraud detection rules engine.
 * [cite_start]**Business Impact:** During FY 26-27, GSB suffered financial losses exceeding $42 million due to these fraudulent transactions[cite: 10].
 
 ## 3. As-Is Process Flow
-*(See `/docs/as_is_process.png` for the detailed BPMN model)*
+
 Currently, authorization requests are processed by the Customer's Bank and sent to local storage. [cite_start]They sit in a queue until 5:00 PM everyday, at which point 'RAVAN' evaluates the transaction risk and flags items for human review. By this time, funds have often already settled.
 
 ## 4. Proposed Solution (To-Be State)
