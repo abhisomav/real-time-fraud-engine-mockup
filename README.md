@@ -18,6 +18,30 @@ Currently, authorization requests are processed by the Customer's Bank and sent 
 To tackle these fraudulent transactions, GSB is implementing a real-time, event-based processing engine: **RAM**.
 * **Performance Metric:** The system will evaluate transactions in under 200 milliseconds.
 * **Execution:** 'RAM' executes business logic the millisecond a payment is triggered, making an immediate system call to approve, decline, or hold the transaction.
+```mermaid
+sequenceDiagram
+    participant C as Customer
+    participant PG as Payment Gateway
+    participant RAM as RAM Fraud Engine
+    participant DB as Core Banking DB
+
+    C->>PG: Initiates Transfer ($500+)
+    PG->>RAM: Streams Transaction Payload (JSON)
+    
+    rect rgb(200, 220, 240)
+        Note right of RAM: Sub-200ms Execution
+        RAM->>DB: Fetch Payee & Profile History
+        DB-->>RAM: Return Historical Data
+        RAM->>RAM: Execute Business Rules (BR-01, BR-02)
+    end
+    
+    alt is Fraudulent (Rule Triggered)
+        RAM-->>PG: HOLD Transaction (Status: 24_HOUR_HOLD)
+        RAM->>DB: Log Event (ATO_PROFILE_VELOCITY)
+    else is Legitimate
+        RAM-->>PG: APPROVE Transaction
+    end
+```
 
 ## 5. Core Business Rules Matrix
 The following matrix outlines the initial rule conditions the `RAM` engine will evaluate in real-time.
