@@ -1,0 +1,9 @@
+{
+  "message_type": "FRAUD_ALERT_OTP",
+  "customer_phone_number": "+61498765432",
+  "transaction_id": "TXN-987654321",
+  "transaction_amount": 550.00,
+  "currency": "AUD",
+  "payee_name": "Jane Doe",
+  "transaction_timestamp": "2026-06-17T20:07:32Z"
+}
