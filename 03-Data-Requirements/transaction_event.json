@@ -1,0 +1,10 @@
+{
+  "transaction_id": "TXN-987654321",
+  "timestamp": "2026-06-17T20:07:32Z",
+  "customer_id": "CUST-554433",
+  "destination_account_number": "123456789",
+  "bank_name": "AUD Standard Bank",
+  "payee_full_name": "Sugree Vaa",
+  "transaction_amount": 550.00,
+  "currency": "AUD"
+}
